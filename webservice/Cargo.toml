@@ -1,0 +1,20 @@
+[package]
+name = "webservice"
+version = "0.1.0"
+edition = "2024"
+
+[dependencies]
+axum = "0.7"
+tokio = { version = "1", features = ["full"] }
+tower-http = { version = "0.6", features = ["trace", "cors"] }
+serde = { version = "1", features = ["derive"] }
+serde_json = "1"
+jsonwebtoken = "9"
+argon2 = { version = "0.5", features = ["std"] }
+uuid = { version = "1", features = ["v4", "serde"] }
+rand = "0.9"
+thiserror = "2"
+tracing = "0.1"
+tracing-subscriber = { version = "0.3", features = ["env-filter"] }
+utoipa = { version = "5", features = ["axum_extras", "uuid"] }
+utoipa-swagger-ui = { version = "8", features = ["axum"] }
